@@ -1,0 +1,87 @@
+body {
+    
+    font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: black; 
+    color: white; 
+    padding: 20px 0; 
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.logo img {
+    max-width: 100px; 
+}
+
+
+.nav-links a {
+    color: white; 
+    text-decoration: none; 
+    margin: 0 15px; 
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+
+.nav-links {
+    text-align: center;
+}
+
+
+.nav-links a.active {
+    color: #4CAF50; 
+}
+
+.nav-links a:hover {
+    color: #4CAF50; 
+}
+
+.content {
+    min-height: calc(100vh - 150px); /* Adjust based on your footer's height and nav's height */
+    padding-bottom: 50px; /* Ensure content is above the footer */
+}
+
+/* Flexbox setup to push footer to the bottom */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto; /* Push footer to the bottom */
+    background-color: black; /* Background color */
+    color: white; /* Text color */
+    padding: 20px 0;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+
+
+
