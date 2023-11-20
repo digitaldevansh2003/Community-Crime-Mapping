@@ -13,6 +13,7 @@ body {
     background-color: black; 
     color: white; 
     padding: 20px 0; 
+    width:100%;
 }
 
 
@@ -20,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -53,6 +54,8 @@ body {
     color: #4CAF50; 
 }
 
+/*Footer CSS */
+
 .content {
     min-height: calc(100vh - 150px); /* Adjust based on your footer's height and nav's height */
     padding-bottom: 50px; /* Ensure content is above the footer */
@@ -73,15 +76,75 @@ body {
     background-color: black; /* Background color */
     color: white; /* Text color */
     padding: 20px 0;
+    width: 100%;
 }
 
 .footer .container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
 }
 
+/*sign-up page css */
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+  }
+  
+  .signup-form {
+    background-color: #ffffff05;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 50px;
+    margin-top: 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .signup-form p{
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: 500px;
+  }
+  
+  .form-group {
+    margin-bottom: 40px;
+    width:330px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
 
 
