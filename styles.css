@@ -1,6 +1,8 @@
-body {
+body.page1{
     
     font-family: 'Roboto Flex', sans-serif;
+    background-image: url('img/map-edited2.jpg'); 
+    background-size: cover;
 }
 
 * {
@@ -92,16 +94,11 @@ body .page2{
     background-image: url('img/map-edited2.jpg');
     background-size: cover; 
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000000;
+    
+    
   }
   
-  .signup-form {
+  .signup-form-container {
     background-color: #ffffff05;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(25px);
@@ -109,10 +106,12 @@ body .page2{
     margin-top: 70px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
   }
 
   .signup-form p{
     margin-bottom: 25px;
+    
     font-size: 30px;
     font-weight: 500px;
   }
@@ -138,6 +137,14 @@ body .page2{
   }
 
   /* Home body styles*/
+
+  .home-container{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Center-align text */
+  margin-top: 100px; 
+  }
 
   .heading{
     font-size: 40px;
@@ -192,7 +199,7 @@ button[type="submit"]:hover {
 /*about page interactive heading*/
 
 body .page3{
-  background-color: #11131e;
+  background-color: #5a69c0;
   }
 
   h1 {
@@ -208,6 +215,40 @@ body .page3{
   top: 10%;
   translate: -50% -50%;
   z-index: 3;
+  }
+
+  .about-description{
+    font-size:12px;
+    position:absolute;
+    left: 22%;
+    top: 15%;
+    text-align: center;
+  }
+
+  .card-container{
+    display:flex;
+    flex-direction:row;
+    margin-top:200px;
+    margin-left:60px;
+    margin-right:60px;
+    justify-content: space-between;
+  }
+
+  .card{
+    padding:20px;
+    background:#4CAF50;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
+    width:300px;
+    height:400px;
+    cursor:pointer;
+    transition:all 0.3s ease-in-out;
+  }
+
+  .card:hover{
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.3);
+    scale:1.04;
+    background:white;
   }
 
   
