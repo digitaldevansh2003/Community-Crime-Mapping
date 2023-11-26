@@ -88,8 +88,8 @@ body {
 
 /*sign-up page css */
 
-body {
-  background-image: url('img/map-edited2.jpg');
+body .page2{
+    background-image: url('img/map-edited2.jpg');
     background-size: cover; 
     font-family: Arial, sans-serif;
     margin: 0;
@@ -189,6 +189,26 @@ button[type="submit"]:hover {
   background-color: #207e23;
 }
 
+/*about page interactive heading*/
+
+body .page3{
+  background-color: #11131e;
+  }
+
+  h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(3rem, 10vw, 10rem);
+  color: white;
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  white-space: nowrap;
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  margin: 10px;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  translate: -50% -50%;
+  z-index: 3;
+  }
 
   
 
