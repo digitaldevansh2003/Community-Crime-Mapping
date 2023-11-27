@@ -532,13 +532,20 @@ h1 {
 
 /*Carousel Style*/
 
+body.page4{
+  background-image: url("img/Grey Photographic Spot Light Backdrop White Background Black And White Shade, Printing, Ornaments, Graceful Background Image And Wallpaper for Free Download.jpeg");
+  background-size: cover;
+}
+
 .carousel-container {
   position: absolute;
   height: 300px;
   width: 600px;
   top: 60px;
-  left: calc(50% - 300px);
+  left: calc(50% - 250px);
   display: flex;
+  align-items: center;
+  margin-top:100px;
 }
 
 .carousel-card {
@@ -600,6 +607,7 @@ h1 {
   background: rgb(0,154,217);
   background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
   transition: 0.6s ease-out;
+  color:rgba(255, 255, 255, 0.472)
 }
 
 .carousel-card:hover .filledbar {
@@ -628,6 +636,22 @@ svg {
 .card:hover .stroke {
   stroke-dashoffset: 100;
   transition: 0.6s ease-out;
+}
+
+.black-strip{
+  height:80px;
+  width:100%;
+  position: absolute;
+  top:70%;
+  background-color: #17141d;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.black-strip p{
+  color:white;
 }
 
 
