@@ -5,13 +5,13 @@ body.page1{
     background-size: cover;
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.navbar {
+.navbar{
     background-color: black; 
     color: white; 
     padding: 20px 0; 
@@ -19,7 +19,7 @@ body.page1{
 }
 
 
-.container {
+.container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,7 +76,7 @@ body {
 .footer {
     margin-top: auto; /* Push footer to the bottom */
     background-color: black; /* Background color */
-    color: white; /* Text color */
+    color: white; 
     padding: 20px 0;
     width: 100%;
 }
@@ -88,17 +88,344 @@ body {
     text-align: center;
 }
 
+/*Home Carousel*/
+
+h2 {
+  font-size: 60px;
+  text-align: center;
+  color: white; /* Added color for h2 */
+}
+
+.content-slider {
+  width: 100%;
+  height: 360px;
+}
+
+.slider {
+  height: 320px;
+  width: 680px;
+  margin: 40px auto 0;
+  overflow: visible;
+  position: relative;
+}
+
+.mask {
+  overflow: hidden;
+  height: 320px;
+}
+
+.slider ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.slider li {
+  width: 680px;
+  height: 320px;
+  position: absolute;
+  top: -325px;
+  list-style: none;
+}
+
+.slider .quote {
+  font-size: 40px;
+  font-style: italic;
+  color: white; /* Added color for .quote */
+}
+
+.slider .source {
+  font-size: 20px;
+  text-align: right;
+}
+
+.slider li.anim1 {
+  animation: cycle 15s linear infinite;
+}
+
+.slider li.anim2 {
+  animation: cycle2 15s linear infinite;
+}
+
+.slider li.anim3 {
+  animation: cycle3 15s linear infinite;
+}
+
+.slider li.anim4 {
+  animation: cycle4 15s linear infinite;
+}
+
+.slider li.anim5 {
+  animation: cycle5 15s linear infinite;
+}
+
+.slider:hover li {
+  animation-play-state: paused;
+}
+
+@keyframes cycle {
+  0% {
+    top: 0px;
+  }
+  4% {
+    top: 0px;
+  }
+  16% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  20% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  21% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  50% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  92% {
+    top: -325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  96% {
+    top: -325px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes cycle2 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  16% {
+    top: -325px;
+    opacity: 0;
+  }
+  20% {
+    top: 0px;
+    opacity: 1;
+  }
+  24% {
+    top: 0px;
+    opacity: 1;
+  }
+  36% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  40% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  41% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle3 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  36% {
+    top: -325px;
+    opacity: 0;
+  }
+  40% {
+    top: 0px;
+    opacity: 1;
+  }
+  44% {
+    top: 0px;
+    opacity: 1;
+  }
+  56% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  60% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  61% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle4 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  56% {
+    top: -325px;
+    opacity: 0;
+  }
+  60% {
+    top: 0px;
+    opacity: 1;
+  }
+  64% {
+    top: 0px;
+    opacity: 1;
+  }
+  76% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  80% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle5 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  76% {
+    top: -325px;
+    opacity: 0;
+  }
+  80% {
+    top: 0px;
+    opacity: 1;
+  }
+  84% {
+    top: 0px;
+    opacity: 1;
+  }
+  96% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+  /* Home body styles*/
+  .home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    margin-top: 50px; 
+    margin-bottom: 100px;
+    }
+    
+    .home-heading{
+        color:yellow;
+        font-size: 45px;
+        font-weight: 600;
+      }
+    
+    
+    .outer-container{
+      display:flex;
+      flex-direction: row;
+      width:550px;
+      padding-top:80px;
+      justify-content:space-between;
+      align-items: center;
+      }
+    
+    form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .column2 p {
+      color:white;
+      font-size: 25px;
+      font-weight:500;
+      width:300px;
+    }
+    
+    input[type="text"] {
+      width:250px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 5px;
+      font-size: 16px;
+      outline: none;
+    }
+    
+    button[type="submit"] {
+      padding: 8px 1px;
+      display:block;
+      width:100px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top:10px;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #207e23;
+    }
+
 /*sign-up page css */
 
-body .page2{
-    background-image: url('img/map-edited2.jpg');
+body.page2{
+    background-image: url('img/purple-graphic-bg.jpeg');
     background-size: cover; 
     font-family: Arial, sans-serif;
-    
-    
   }
   
-  .signup-form-container {
+.signup-form-container {
     background-color: #ffffff05;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(25px);
@@ -109,21 +436,21 @@ body .page2{
     
   }
 
-  .signup-form p{
+.signup-form p{
     margin-bottom: 25px;
     
     font-size: 30px;
     font-weight: 500px;
   }
   
-  .form-group {
+.form-group {
     margin-bottom: 40px;
     width:330px;
   }
   
-  label {
-    display: block;
-    margin-bottom: 5px;
+label {
+  display: block;
+  margin-bottom: 5px;
   }
   
   input[type="text"],
@@ -136,73 +463,15 @@ body .page2{
     border: 1px solid #ccc;
   }
 
-  /* Home body styles*/
 
-  .home-container{
-    display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; /* Center-align text */
-  margin-top: 100px; 
-  }
-
-  .heading{
-    font-size: 40px;
-    font-weight:500px;
-    color:yellow;
-    margin-top: 20px;
-  }
-
-  .outer-container{
-    display:flex;
-    flex-direction: row;
-    width:550px;
-    padding-top:80px;
-    justify-content:space-between;
-    align-items: center;
-  }
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-input[type="text"] {
-  width:250px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 5px;
-  font-size: 16px;
-  outline: none;
-}
-
-button[type="submit"] {
-  padding: 8px 1px;
-  display:block;
-  width:100px;
-  border: none;
-  border-radius: 4px;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top:10px;
-}
-
-button[type="submit"]:hover {
-  background-color: #207e23;
-}
 
 /*about page interactive heading*/
 
 body .page3{
   background-color: #5a69c0;
-  }
+}
 
-  h1 {
+h1 {
   font-family: 'Space Mono', monospace;
   font-size: clamp(3rem, 10vw, 10rem);
   color: white;
@@ -217,32 +486,32 @@ body .page3{
   z-index: 3;
   }
 
-  .about-description{
-    font-size:12px;
-    position:absolute;
-    left: 22%;
-    top: 15%;
-    text-align: center;
-  }
+.about-description{
+  font-size:12px;
+  position:absolute;
+  left: 22%;
+  top: 15%;
+  text-align: center;
+}
 
-  .card-container{
-    display:flex;
-    flex-direction:row;
-    margin-top:200px;
-    margin-left:60px;
-    margin-right:60px;
-    justify-content: space-between;
-  }
+.card-container{
+  display:flex;
+  flex-direction:row;
+  margin-top:200px;
+  margin-left:60px;
+  margin-right:60px;
+  justify-content: space-between;
+}
 
-  .card{
-    padding:20px;
-    background:#4CAF50;
-    border-radius:15px;
-    box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
-    width:300px;
-    height:400px;
-    cursor:pointer;
-    transition:all 0.3s ease-in-out;
+.card{
+  padding:20px;
+  background:#4CAF50;
+  border-radius:15px;
+  box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
+  width:300px;
+  height:400px;
+  cursor:pointer;
+  transition:all 0.3s ease-in-out;
   }
 
   .card:hover{
@@ -250,6 +519,109 @@ body .page3{
     scale:1.04;
     background:white;
   }
+
+/*Contact page styles*/
+
+/*Carousel Style*/
+
+.carousel-container {
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  top: 60px;
+  left: calc(50% - 300px);
+  display: flex;
+}
+
+.carousel-card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.carousel-card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.carousel-card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.carousel-card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.carousel-card-title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.carousel-card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
 
   
 
