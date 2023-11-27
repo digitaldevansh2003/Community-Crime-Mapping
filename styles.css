@@ -420,27 +420,34 @@ h2 {
 /*sign-up page css */
 
 body.page2{
-    background-image: url('img/purple-graphic-bg.jpeg');
-    background-size: cover; 
-    font-family: Arial, sans-serif;
+  background-image: url('img/purple-graphic-bg.jpeg');
+  background-size: cover; 
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   }
   
 .signup-form-container {
-    background-color: #ffffff05;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(25px);
-    padding: 50px;
-    margin-top: 70px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  width:450px;
+  background-color: #ffffff05;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(25px);
+  padding: 30px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-left:500px;
     
   }
 
-.signup-form p{
+.signup-form-container p{
     margin-bottom: 25px;
-    
     font-size: 30px;
     font-weight: 500px;
+    color:white;
   }
   
 .form-group {
@@ -451,6 +458,7 @@ body.page2{
 label {
   display: block;
   margin-bottom: 5px;
+  color:white;
   }
   
   input[type="text"],
