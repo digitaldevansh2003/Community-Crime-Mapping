@@ -487,9 +487,9 @@ h1 {
   }
 
 .about-description{
-  font-size:12px;
+  font-size:15px;
   position:absolute;
-  left: 22%;
+  left: 15%;
   top: 15%;
   text-align: center;
 }
