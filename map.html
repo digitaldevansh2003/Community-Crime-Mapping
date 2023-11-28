@@ -6,11 +6,18 @@
     <title>Leaflet Map Example</title>
     <!-- Include Leaflet CSS and JS from CDN -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <style>
         /* Set the size of the map container */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        
+
         #map {
-            height: 500px;
+            height: 100%;
             width: 100%;
         }
     </style>
@@ -22,7 +29,7 @@
 
 <script>
     // Initialize the map
-    var mymap = L.map('map').setView([28.472308, 77.488061], 12);
+    var mymap = L.map('map').setView([28.472308, 77.488061], 14);
 
     // Add a tile layer (using OpenStreetMap tiles)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -64,17 +71,32 @@
             }
         },
         // Point feature
+        //point 1
         {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [77.488061, 28.472308] 
+                "coordinates": [77.488535, 28.474022] 
             },
             "properties": {
                 "marker-color": "blue",
                 "marker-symbol": "incident",
                 "title": "Murder",
                 "description": "Murder"
+            }
+        }
+        //point 2
+        ,{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [77.489335, 28.474439] 
+            },
+            "properties": {
+                "marker-color": "blue",
+                "marker-symbol": "incident",
+                "title": "Theft",
+                "description": "At midnight"
             }
         }
     ]
@@ -97,7 +119,7 @@
                 icon: L.divIcon({
                     className: 'custom-marker',
                     html: '<i class="fas fa-exclamation-circle"></i>',
-                    iconSize: [20, 20],
+                    iconSize: [30, 30],
                     iconAnchor: [10, 10],
                 })
             }).bindPopup("<b>" + feature.properties.title + "</b><br>" + feature.properties.description);
