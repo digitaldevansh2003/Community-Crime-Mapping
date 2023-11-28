@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map Example</title>
+    <!-- Include Leaflet CSS and JS from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        /* Set the size of the map container */
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Map container -->
+<div id="map"></div>
+
+<script>
+    // Initialize the map
+    var mymap = L.map('map').setView([28.472308, 77.488061], 12);
+
+    // Add a tile layer (using OpenStreetMap tiles)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(mymap);
+
+    // Sample GeoJSON data representing roads and incident locations in Delhi
+    var geojsonFeature = {
+    "type": "FeatureCollection",
+    "features": [
+        // LineString features
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [77.481576, 28.478297],
+                    [77.485405, 28.474289],
+                    [77.490557, 28.468702]
+                    // Add more coordinates as needed
+                ]
+            },
+            "properties": {
+                "color": "red"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [77.487240, 28.473209],  // Coords A
+                    [77.488061, 28.472308],  // Intermediate point
+                    [77.488944, 28.47133]  // Coords B
+                ]
+            },
+            "properties": {
+                "color": "green"
+            }
+        },
+        // Point feature
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [77.488061, 28.472308] 
+            },
+            "properties": {
+                "marker-color": "blue",
+                "marker-symbol": "incident",
+                "title": "Murder",
+                "description": "Murder"
+            }
+        }
+    ]
+};
+
+    // Define a function to set the style based on the "color" property
+    function style(feature) {
+        return {
+            color: feature.properties.color,
+            weight: 5,
+            opacity: 0.7
+        };
+    }
+
+    // Add GeoJSON layer with custom style
+    L.geoJSON(geojsonFeature, {
+        style: style,
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {
+                icon: L.divIcon({
+                    className: 'custom-marker',
+                    html: '<i class="fas fa-exclamation-circle"></i>',
+                    iconSize: [20, 20],
+                    iconAnchor: [10, 10],
+                })
+            }).bindPopup("<b>" + feature.properties.title + "</b><br>" + feature.properties.description);
+        }
+    }).addTo(mymap);
+</script>
+
+</body>
+</html>
