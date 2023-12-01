@@ -440,8 +440,12 @@ body.page2{
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
-  margin-top: 50px;
-    
+  margin-top: 50px; 
+  
+  }
+
+  .signup-form-container:hover{
+    background: transparent radial-gradient(at calc(var(--mouse-x, 0) * 100%) calc(var(--mouse-y, 0) * 100%), #824BB6, transparent) no-repeat 0 0  
   }
 
 .signup-form-container p{
@@ -654,11 +658,3 @@ svg {
 .black-strip p{
   color:white;
 }
-
-
-  
-
-  
-  
-  
-
