@@ -1,81 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Community Crime Mapping</title>
+
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&display=swap" rel="stylesheet">
+
+    <!--Files for glowing header-->
+
+    <link rel="preconnect" href="https://fonts.googleapi s.com">
+    <link rel="preconnect" href="https://fonts.gstatic.co m" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family= Space+Mono:wght@400;700&family=Rubik:wght@400%;500&displ ay=swap" rel="stylesheet">
+    
+        <style>
+
+      /*Safety Page CSS*/
+
+        body.page6{
+          background-image:url("img/Premium Vector _ Modern abstract black background with for presentation.jpeg")
+        }
+
+        .safety-card-container{
+          display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 200px;
+        margin-bottom: 40px;
+        padding: 0 40px;
+        }
+
+        .safety-card{
+          flex: 0 0 calc(33.33% - 20px);
+          align-items: center;
+          padding: 20px;
+          background: rgba(161, 161, 161, 0.8); 
+          border-radius: 15px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          height: 250px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          
+          }
+
+        .safety-card:hover{
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        scale: 1.04;
+        background: rgb(198, 198, 198);
+          }
+
+          .safety-card p {
+            display: flex;
+            margin-top: 27px;
+            margin-left: 15px;
+          }
+
+        h1 {
+        font-family: 'Space Mono', monospace;
+        font-size: clamp(2rem, 5vw, 5rem);
+        color: white;
+        padding: 0rem clamp(1rem, 2vw, 3rem);
+        white-space: nowrap;
+        border-radius: clamp(0.4rem, 0.75vw, 1rem);
+        margin: 10px;
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        translate: -50% -50%;
+        z-index: 3;
+        }
+
+      
+
+    </style>
   </head>
-  <body>
-    <h1>Safety Measures</h1>
+  <body class="page6">
+
+    <!--Header Code Here-->
+    <nav class="navbar">
+      <div class="container">
+          <div class="logo">
+              <img src="img/WhatsApp Image 2023-11-27 at 5.03.58 PM.jpeg" alt="Logo">
+          </div>
+          <div class="nav-links">
+              <a href="http://127.0.0.1:5500/index.html">Home</a>
+              <a href="http://127.0.0.1:5500/map.html">Map</a>
+              <a href="http://127.0.0.1:5500/about.html">About</a>
+              <a href="http://127.0.0.1:5500/contact.html">Contact</a>
+              <a href="http://127.0.0.1:5500/safety.html">Safety Measures</a>
+              <a href="http://127.0.0.1:5500/Sign-up.html">Sign-up</a>
+          </div>
+      </div>
+  </nav>
+
+
+  <div class="about-heading">
+      <h1 data-value="Safety Measures">Safety Measures</h1>
+  </div>
+
+
+
+    <div class="safety-card-container">
+      <div class="safety-card">
+          <h3>Community Awareness:</h3>
+          <p>Stay informed about the crime trends in your community through local news, community meetings, and crime reports.</p>
+      </div>
+      <div class="safety-card">
+          <h3>Neighborhood Watch:</h3>
+          <p>Participate in or establish a neighborhood watch program to encourage community members to look out for each other and report suspicious activities .</p>
+      </div>
+      <div class="safety-card">
+          <h3>Good Lighting:</h3>
+          <p>Ensure well-lit streets and public areas to discourage criminal activity.</p>
+      </div>
+      <div class="safety-card">
+          <h3>Communication and Collaboration:</h3>
+          <p>Foster open communication with neighbors and local law enforcement to share information about security concerns and incidents.</p>
+      </div>
+      <div class="safety-card">
+        <h3>Emergency Contacts:</h3>
+        <p>Exchange emergency contact information with neighbors and have a community contact list in case of emergencies.</p>
+      </div>
+      <div class="safety-card">
+        <h3>Safe Public Spaces:</h3>
+        <p>Advocate for well-maintained and safe public spaces, including parks, streets, and community centers.</p>
+      </div>
+      <div class="safety-card">
+        <h3>Report Suspicious Activity:</h3>
+        <p>Encourage community members to report any unusual or suspicious activity to the police promptly.</p>
+      </div>
+      <div class="safety-card">
+        <h3>Community Cleanup Events:</h3>
+        <p>Organize community cleanup events to improve the overall appearance and safety of public spaces.</p>
+      </div>
+      <div class="safety-card">
+        <h3>Personal Security Measures:</h3>
+        <p>Follow personal safety tips, such as being aware of your surroundings, using well-lit pathways, and avoiding isolated areas.</p>
+    </div>
+    <div class="safety-card">
+        <h3>Education Programs:</h3>
+        <p>Organize or participate in community education programs on crime prevention, personal safety, and emergency preparedness.</p>
+    </div>
+    <div class="safety-card">
+        <h3>Collaborate with Local Authorities:</h3>
+        <p> Work with local law enforcement to address community-specific crime concerns and implement targeted solutions.</p>
+    </div>
+    <div class="safety-card">
+        <h3>Security Assessments:</h3>
+        <p>Conduct security assessments for residential and community spaces to identify potential vulnerabilities.</p>
+    </div>
+    <div class="safety-card">
+      <h3>Emergency Contacts:</h3>
+      <p>Exchange emergency contact information with neighbors and have a community contact list in case of emergencies.</p>
+    </div>
+    <div class="safety-card">
+      <h3>Safe Public Spaces:</h3>
+      <p>Advocate for well-maintained and safe public spaces, including parks, streets, and community centers.</p>
+    </div>
+    <div class="safety-card">
+      <h3>Report Suspicious Activity:</h3>
+      <p>Encourage community members to report any unusual or suspicious activity to the police promptly.</p>
+    </div>
+    
+  </div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+    <!--<h1>Safety Measures</h1>
     <div class="para">
-    <p>Community Awareness:
-        <br>
-
-        Stay informed about the crime trends in your community through local news, community meetings, and crime reports.
-        <br>
-        Neighborhood Watch:
-        <br>
-
+    
+    
         
-        Participate in or establish a neighborhood watch program to encourage community members to look out for each other and report suspicious activities.
-        <br>
-        Secure Home Environment:
-        <br>
-
         
-        Install and use security systems, such as alarms and surveillance cameras, to deter burglaries.
-        Ensure all doors and windows are securely locked, especially when leaving the house.
-        <br>
-        Good Lighting:
-        <br>
-
-        
-        Ensure well-lit streets and public areas to discourage criminal activity.
-        <br>
-        Communication and Collaboration:
-        <br>
-
-        
-        Foster open communication with neighbors and local law enforcement to share information about security concerns and incidents.
-        <br>
-        Emergency Contacts:
-        <br>
-
-        
-        Exchange emergency contact information with neighbors and have a community contact list in case of emergencies.
-        <br>
-        Safe Public Spaces:
-        <br>
-
-        
-        Advocate for well-maintained and safe public spaces, including parks, streets, and community centers.
-        <br>
-        Report Suspicious Activity:
-        
-        <br>
-        Encourage community members to report any unusual or suspicious activity to the police promptly.
-        <br>
-        Community Cleanup Events:
-        <br>
-        
-        Organize community cleanup events to improve the overall appearance and safety of public spaces.
-        <br>
-        Personal Security Measures:
-        <br>
-        
-        Follow personal safety tips, such as being aware of your surroundings, using well-lit pathways, and avoiding isolated areas.
-        <br>
-        Education Programs:
-        <br>
-        
-        Organize or participate in community education programs on crime prevention, personal safety, and emergency preparedness.
-        <br>
-        Collaborate with Local Authorities:
-        <br>
-        
-        Work with local law enforcement to address community-specific crime concerns and implement targeted solutions.
-        <br>
+      
         Security Assessments:
         <br>
         
@@ -105,8 +220,13 @@
         <br>
         
         Stay informed about local laws and regulations, empowering community members to advocate for safer environments.</p>
-    </div>
+    </div>-->
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--js codes for animated header ,hehehe-->
+
+    <script src='https://codepen.io/Hyperplexed/pen/xxYJY jM/54407644e24173ad6019b766443bf2a6.js'></script>
+    <script src="javaScriptCodes.js"></script>
+
   </body>
 </html>
