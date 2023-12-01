@@ -542,6 +542,12 @@ body.page4{
   background-size: cover;
 }
 
+.carousel-inner {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .carousel-container {
   position: absolute;
   height: 300px;
